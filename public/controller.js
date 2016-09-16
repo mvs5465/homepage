@@ -32,6 +32,12 @@
             , templateUrl: 'tab-recipes.html'
         };
     });
+    app.directive('tabCode', function () {
+        return {
+            restrict: 'E'
+            , templateUrl: 'tab-code.html'
+        };
+    });
     var title = {
         heading: "The Brewhause"
         , description: " - Home -"
