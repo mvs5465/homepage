@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainApp">
 
 <head>
     <!-- load bootstrap -->
@@ -14,15 +14,16 @@
         .backimg {
             background-image: url(park.jpg);
             background-size: cover;
-            height: 1000px;
+            height: 100vh;
+            display: flex;
         }
         
         .scrollpage {
             padding-top: 55px;
             background-color: white;
-            height: 100%;
+            height: 100vh;
             opacity: 0.95;
-            text-align: center;
+            padding-left: 30px;
         }
         
         .navbar-inverse {
@@ -40,53 +41,46 @@
         .food-box {
             height: 100px;
         }
+        
+        .centered {
+            text-align: center;
+            align-items: center;
+        }
+        
+        .homenavbtn {
+            width: 100%;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 10px;
+        }
     </style>
-    <script>
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
-
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-        }
-    </script>
 </head>
 
-<body ng-app="mainApp" class="container-fluid">
+<body class="container-fluid" ng-controller="tabController">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header"> <a class="navbar-brand" href="#">The Brewhause</a></div>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">Hide</button>
             <div id="myNavbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Recipes</a></li>
-                    <li><a href="#">National Parks</a></li>
-                    <li><a href="#">Programming</a></li>
+                    <li ng-class="{active:tab == 0}"><a href ng-click="setTabIndex(0)"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                    <li ng-class="{active:tab == 1}"><a href ng-click="setTabIndex(1)"><span class="glyphicon glyphicon-glass"></span>  Recipes</a></li>
+                    <li ng-class="{active:tab == 2}"><a href ng-click="setTabIndex(2)"><span class="glyphicon glyphicon-globe"></span>  National Parks</a></li>
+                    <li ng-class="{active:tab == 3}"><a href ng-click="setTabIndex(3)"><span class="glyphicon glyphicon-road"></span>  Programming</a></li>
                 </ul>
             </div>
+        </div> {{tabIndex}} </nav>
+    <div ng-controller="mainController">
+        <div ng-show="tabActive(0)">
+            <tab-home></tab-home>
         </div>
-    </nav>
-    <div ng-controller="mainController" class="row backimg">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 scrollpage">
-            <div class="row">
-                <h1>{{title.heading}}</h1></div>
-            <div class="row ">{{title.description}}</div>
-            <hr>
-            <div class="row">
-                <div id="drag1" class="col-md-4 bordered food-box" draggable="true" ondragstart="drag(event)">Test1</div>
-                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Here</div>
-                <!--
-               <div class="col-md-4 bordered food-box">Test2</div>
-<div class="col-md-4 bordered food-box">Test3</div>
---></div>
+        <div ng-show="tabActive(1)">
+            <tab-recipes></tab-recipes>
+        </div>
+        <div ng-show="tabActive(2)">
+            <tab-parks></tab-parks>
         </div>
     </div>
 </body>
