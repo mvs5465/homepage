@@ -1,19 +1,5 @@
 (function () {
-    'use strict';
-    var app = angular.module('mainApp', []);
-    app.controller('mainController', function ($scope) {
-        $scope.greeting = "Hello World How's it going";
-        $scope.title = title;
-    });
-    app.controller('tabController', function ($scope) {
-        $scope.tab = 0;
-        $scope.setTabIndex = function (tabNum) {
-            $scope.tab = tabNum;
-        }
-        $scope.tabActive = function (num) {
-            return ($scope.tab === num);
-        }
-    });
+    var app = angular.module('MainApp');
     app.directive('tabHome', function () {
         return {
             restrict: 'E'
@@ -38,8 +24,4 @@
             , templateUrl: 'tab-code.html'
         };
     });
-    var title = {
-        heading: "The Brewhause"
-        , description: " - Home -"
-    };
-})();
+}());

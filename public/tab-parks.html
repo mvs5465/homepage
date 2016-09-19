@@ -1,13 +1,40 @@
-<div class="row backimg">
+<!-- National Park Tab  -->
+<div class="row backimg" ng-controller="ParkController">
     <div class="col-md-2"></div>
     <div class="col-md-8 scrollpage">
         <div class="centered">
             <div class="row">
                 <h1>{{title.heading}}</h1></div>
             <div class="row ">- National Parks -</div>
-            <hr> </div>
+            <hr>
+            <div class="row">
+                <div style="" class="col-md-4">
+                    <select multiple class="form-control">
+                        <option ng-repeat="park in parks" ng-click="setPark($index)">{{park.name}}</option>
+                    </select>
+                </div>
+                <div style="margin-left:20px" class="col-md-7 natparkdiv">
+                    <div class="row">
+                        <h3>{{selectedPark.name}} National Park</h3>
+                        <hr>
+                        <div class="col-md-6" style="border-right:1px solid lightgrey">
+                            <h4>{{selectedPark.state}} </h4></div>
+                        <div class="col-md-6">
+                            <div ng-show="selectedPark.visited">
+                                <h4><span style="color:green" class="glyphicon glyphicon-ok"></span> Visited!</h4></div>
+                            <div ng-show="!selectedPark.visited">
+                                <h4><span style="color:red" class="glyphicon glyphicon-remove"></span> Not Visited.</h4></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div style="height:300px"> <img src="img/{{selectedPark.image}}" style="max-height:300px; max-width: 400px;" alt="(image.jpg)"></div>
+                    </div>
+                    <hr> </div>
+            </div>
+        </div>
     </div>
     <script>
-        console.log("[INFO] national page loaded")
+        console.log(" [INFO] national page loaded ")
     </script>
 </div>
