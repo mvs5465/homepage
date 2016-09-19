@@ -12,4 +12,4 @@ app.get('/', function (req, res) {
         root: __dirname
     });
 });
-app.use(express.static(path.join(__dirname, 'public'))); // load the single view file (angular will handle the page changes on the front-end) });
+app.use(express.static(path.join(__dirname, 'public'))); // serve static
