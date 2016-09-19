@@ -2,7 +2,7 @@
     'use strict';
     var app = angular.module('MainApp');
     app.controller('TabController', function ($scope) {
-        $scope.tab = 2;
+        $scope.tab = 0;
         $scope.setTabIndex = function (tabNum) {
             $scope.tab = tabNum;
         }
