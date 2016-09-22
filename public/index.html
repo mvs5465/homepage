@@ -2,13 +2,16 @@
 <html ng-app="MainApp">
 
 <head>
+    <title>Dogeland</title>
     <!-- load bootstrap -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- load jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/jquery.gridster.min.js"></script>
     <!-- load angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.gridster.min.css"> </head>
 
 <body class="container-fluid" ng-controller="TabController">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -21,6 +24,7 @@
                     <li ng-class="{active:tab == 1}"><a href ng-click="setTabIndex(1)"><span class="glyphicon glyphicon-glass"></span> Recipes</a></li>
                     <li ng-class="{active:tab == 2}"><a href ng-click="setTabIndex(2)"><span class="glyphicon glyphicon-globe"></span> National Parks</a></li>
                     <li ng-class="{active:tab == 3}"><a href ng-click="setTabIndex(3)"><span class="glyphicon glyphicon-road"></span> Programming</a></li>
+                    <li ng-class="{active:tab == 4}"><a href ng-click="setTabIndex(4)"><span class="glyphicon glyphicon-wrench"></span> API</a></li>
                 </ul>
             </div>
         </div> {{tabIndex}} </nav>
@@ -37,12 +41,16 @@
         <div ng-show="tabActive(3)">
             <tab-code></tab-code>
         </div>
+        <div ng-show="tabActive(4)">
+            <tab-api></tab-api>
+        </div>
     </div>
     <!-- Angular Controllers -->
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/title.js"></script>
     <script type="text/javascript" src="controllers/tabs.js"></script>
     <script type="text/javascript" src="controllers/park.js"></script>
+    <script type="text/javascript" src="controllers/api.js"></script>
     <script type="text/javascript" src="directives/tabs.js"></script>
 </body>
 

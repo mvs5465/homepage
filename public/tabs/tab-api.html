@@ -1,0 +1,26 @@
+<div class="row backimg" ng-controller="ApiController">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 scrollpage">
+        <div class="centered">
+            <div class="row">
+                <h1>{{title.heading}}</h1></div>
+            <div class="row ">- API Testing -</div>
+            <hr>
+            <div class="row">
+                <button class="btn btn-primary" ng-click="getApiHello('results')">Hit API</button>
+                <hr>
+                <div id="results"><span style="color:lightgrey">Results...</span></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var loadHelloWorld = function () {
+                $.get('/api/hello', function (req, res) {
+                    $('#results').html(req.body);
+                });
+            };
+        });
+        console.log("[INFO] API testing page loaded");
+    </script>
+</div>
