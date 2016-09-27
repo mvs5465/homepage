@@ -8,6 +8,13 @@ The Homepage Project is a testing ground for MEAN stack development. This stack 
 * **A**ngular is a front-end language for page interaction
 * **N**ode is a back-end environment  
 
+## Todo
+
+- [x] Fix background image scrolling issues
+- [ ] Fix Google Map loading (can somehow force load by opening devtools)
+- [ ] Improve parks tab UI
+- [ ] Add highlighting effects to navbar
+
 ## Dependencies
 
 * *Node* and *Node Package Manager* are required for this project.  
