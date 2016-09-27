@@ -1,6 +1,6 @@
 # The Homepage Project
 
-## Summary
+### Summary
 
 The Homepage Project is a testing ground for MEAN stack development. This stack is set of JavaScript frameworks that allow developers to create an entire website stack using only JS code.
 * **M**ongoDB is the database
@@ -8,14 +8,15 @@ The Homepage Project is a testing ground for MEAN stack development. This stack 
 * **A**ngular is a front-end language for page interaction
 * **N**ode is a back-end environment  
 
-## Todo
+### Todo
 
 - [x] Fix background image scrolling issues
 - [ ] Fix Google Map loading (can somehow force load by opening devtools)
 - [ ] Improve parks tab UI
 - [ ] Add highlighting effects to navbar
+- [ ] Stop using CDNs
 
-## Dependencies
+### Dependencies
 
 * *Node* and *Node Package Manager* are required for this project.  
 ```brew install node```  
@@ -24,16 +25,16 @@ The Homepage Project is a testing ground for MEAN stack development. This stack 
 * All dependent Node modules for this project are stored in _package.json_  
 ```npm install```  
 
-## Usage 
+### Usage 
 
 * ~~Requires a running MongoDB instance~~ (not yet integrated)  
 * Run from root directory  
 ```node app.js```
 
-## Version  
+### Version  
 
-Version 0.0.1 (alpha)
+Version 0.1 (alpha)
 
-## License
+### License
 
 This project is open-source.
