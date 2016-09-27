@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // serve static
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
-mongoose.connect('mongodb://localhost/web_db');
+//mongoose.connect('mongodb://localhost/web_db');
 app.get('/', function (req, res) {
     res.sendFile('public/index.html', {
         root: __dirname

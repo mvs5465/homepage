@@ -1,16 +1,24 @@
+html {
+    /* hacky fix for slow 'background-attachment:fixed' performance */
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
 .backimg {
     background-image: url(../img/park.jpg);
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
-    display: flex;
+    width: auto;
+    /*        display: flex;*/
 }
 
 .scrollpage {
     padding-top: 55px;
     background-color: white;
-    height: 100vh;
+    height: 100%;
     opacity: 0.95;
     padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navbar-inverse {
@@ -47,6 +55,11 @@
 .natparkdiv {
     border: 1px solid lightgrey;
     border-radius: 5px;
+}
+
+.natparkdiv .heading {
+    background-color: lightgrey;
+    border-bottom: 1px solid lightgrey;
 }
 
 .recipe {

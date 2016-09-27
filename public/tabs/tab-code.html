@@ -56,6 +56,17 @@
                 </style>
                 <div style="background-color: blue; height:100px; width:100px;" ng-click="{class:movingdiv}"></div>
             </div>
+            <div>
+                <div class="accordion-group">
+                    <div id="div1" class="collapse in">
+                        <div class="well">Show me, show me not</div>
+                        <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#div2" data-parent="#parent">Hide</button>
+                    </div>
+                    <div id="div2" class="collapse">
+                        <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#div1" data-parent="#parent">Show</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
