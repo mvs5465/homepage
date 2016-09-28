@@ -1,0 +1,30 @@
+<div id="parkback" class="row">
+    <div id="park-intro" style="text-align:center;margin-top:40vh;">
+        <h1>Are you ready?</h1></div>
+    <script>
+        console.log("[INFO] parks 2.0 page loaded");
+        $('#park-intro').click(function () {
+            $('#park-intro').fadeOut(1000, function () {
+                $('#park-intro').html("<h1 class=\"hover-grey\">Lets get started</h1>").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    putParks();
+                });
+            });
+        });
+
+        function putParks() {
+            $('#park-intro').html("<h1><i>Select a park</i></h1>");
+            for (var i = 0; i < parks.length; i++) {
+                console.log("[INFO-LOG] Putting " + parks[i]);
+                $('#park-intro').append("<h3 class=\"hover-grey\">" + parks[i] + "</h3>");
+            }
+            $('#park-intro').fadeIn(1000);
+        }
+        var parks = ["Acadia", "Grand Canyon", "Yosemite"];
+    </script>
+    <style>
+        .hover-grey:hover {
+            color: lightgrey;
+            transition-duration: 0.4s;
+        }
+    </style>
+</div>

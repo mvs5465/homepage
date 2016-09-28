@@ -3,13 +3,32 @@ html {
     -webkit-transform: translate3d(0, 0, 0);
 }
 
-.backimg {
+.background-park {
     background-image: url(../img/park.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     width: auto;
-    /*        display: flex;*/
+}
+
+.background-home {
+    background-color: darkcyan;
+    height: 100vh;
+}
+
+.background-recipes {
+    background-color: darkgreen;
+    height: 100vh;
+}
+
+.background-code {
+    background-color: dimgrey;
+    height: 100vh;
+}
+
+.background-api {
+    background-color: burlywood;
+    height: 100vh;
 }
 
 .scrollpage {
@@ -19,6 +38,10 @@ html {
     opacity: 0.95;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.navbar {
+    background-color: black;
 }
 
 .navbar-inverse {

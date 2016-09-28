@@ -10,7 +10,7 @@
     app.directive('tabParks', function () {
         return {
             restrict: 'E'
-            , templateUrl: 'tabs/tab-parks.html'
+            , templateUrl: 'tabs/tab-parks-new.html'
         };
     });
     app.directive('tabRecipes', function () {
