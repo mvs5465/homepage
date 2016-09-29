@@ -7,8 +7,8 @@ var path = require('path');
 var mongoose = require('mongoose');
 var app = express();
 app.use(express.static(path.join(__dirname, 'public'))); // serve static
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(80, function () {
+    console.log('Example app listening on port 80!');
 });
 //mongoose.connect('mongodb://localhost/web_db');
 app.get('/', function (req, res) {
