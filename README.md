@@ -8,23 +8,24 @@ The Homepage Project is a testing ground for MEAN stack development. This stack 
 * **A**ngular is a front-end language for page interaction
 * **N**ode is a back-end environment  
 
-### Todo
+## Todo
 
-In-progress:
+#### In-progress
+
 - [ ] Improve parks tab UI
 
-Backlog:
+#### Backlog
+
 - [ ] Move "Select a park!" dropdown on Nat Parks 1 into Summary widget
 - [ ] Fix Google Map loading (tempfix is to have force-load button)
 - [ ] Add highlighting effects to navbar
 - [ ] Stop using CDNs
 
-
-Completed:
+#### Completed
 - [x] Remove glyphicons
 - [x] Fix background image scrolling issues
 
-### Dependencies
+## Dependencies
 
 * *Node* and *Node Package Manager* are required for this project.  
 ```brew install node```  
@@ -33,16 +34,15 @@ Completed:
 * All dependent Node modules for this project are stored in _package.json_  
 ```npm install```  
 
-### Usage 
+## Usage 
 
 * ~~Requires a running MongoDB instance~~ (not yet integrated)  
-* Run from root directory  
-```node app.js```
+* To run ```npm start```
 
-### Version  
+## Version  
 
-Version 0.1 (alpha)
+Version 0.x (pre-alpha)
 
-### License
+## License
 
-This project is open-source.
+MIT
