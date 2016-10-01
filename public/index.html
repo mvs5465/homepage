@@ -7,7 +7,8 @@
     <script src="/lib/js/jquery.min.js"></script>
     <script src="/lib/js/bootstrap.min.js"></script>
     <script src="/lib/js/angular.min.js"></script>
-    <link rel="stylesheet" href="/lib/css/bootstrap.min.css"> </head>
+    <link rel="stylesheet" href="/lib/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> </head>
 
 <body class="container-fluid" ng-controller="TabController">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -16,11 +17,14 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">Hide</button>
             <div id="myNavbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li ng-class="{active:tab == 0}"><a href ng-click="setTabIndex(0)"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li ng-class="{active:tab == 1}"><a href ng-click="setTabIndex(1)"><span class="glyphicon glyphicon-glass"></span> Recipes</a></li>
-                    <li ng-class="{active:tab == 2}"><a href ng-click="setTabIndex(2)"><span class="glyphicon glyphicon-globe"></span> National Parks</a></li>
-                    <li ng-class="{active:tab == 3}"><a href ng-click="setTabIndex(3)"><span class="glyphicon glyphicon-road"></span> Programming</a></li>
-                    <li ng-class="{active:tab == 4}"><a href ng-click="setTabIndex(4)"><span class="glyphicon glyphicon-wrench"></span> API</a></li>
+                    <li ng-class="{active:tab == 0}"><a href ng-click="setTabIndex(0)"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a></li>
+                    <li ng-class="{active:tab == 1}"><a href ng-click="setTabIndex(1)"><i class="fa fa-birthday-cake fa-fw" aria-hidden="true"></i>&nbsp;Recipes</a></li>
+                    <li ng-class="{active:tab == 2}"><a href ng-click="setTabIndex(2)"> National Parks 1</a></li>
+                    <li ng-class="{active:tab == 3}"><a href ng-click="setTabIndex(3)"> National Parks 2</a></li>
+                    <li ng-class="{active:tab == 4}"><a href ng-click="setTabIndex(4)"> National Parks 3</a></li>
+                    <li ng-class="{active:tab == 5}"><a href ng-click="setTabIndex(5)"><i class="fa fa-coffee fa-fw" aria-hidden="true"></i>&nbsp; Programming</a></li>
+                    <li ng-class="{active:tab == 6}"><a href ng-click="setTabIndex(6)"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;API</a></li>
+                    <li ng-class="{active:tab == 7}"><a href ng-click="setTabIndex(7)"><i class="fa fa-info fa-fw" aria-hidden="true"></i>&nbsp; Changelog</a></li>
                 </ul>
             </div>
         </div> {{tabIndex}} </nav>
@@ -32,13 +36,22 @@
             <tab-recipes></tab-recipes>
         </div>
         <div ng-show="tabActive(2)">
-            <tab-parks></tab-parks>
+            <tab-parks1></tab-parks1>
         </div>
         <div ng-show="tabActive(3)">
-            <tab-code></tab-code>
+            <tab-parks2></tab-parks2>
         </div>
         <div ng-show="tabActive(4)">
+            <tab-parks3></tab-parks3>
+        </div>
+        <div ng-show="tabActive(5)">
+            <tab-code></tab-code>
+        </div>
+        <div ng-show="tabActive(6)">
             <tab-api></tab-api>
+        </div>
+        <div ng-show="tabActive(7)">
+            <tab-log></tab-log>
         </div>
     </div>
     <!-- Angular Controllers -->

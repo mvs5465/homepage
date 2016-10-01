@@ -17,9 +17,10 @@ Backlog:
 - Fix Google Map loading (can somehow force load by opening devtools)
 - Add highlighting effects to navbar
 - Stop using CDNs
-- Remove glyphicons
+
 
 Completed:
+- [x] Remove glyphicons
 - [x] Fix background image scrolling issues
 
 ### Dependencies

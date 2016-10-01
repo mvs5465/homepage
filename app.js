@@ -5,10 +5,12 @@
 var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
+var PORT_LISTEN = 3000;
 var app = express();
 app.use(express.static(path.join(__dirname, 'public'))); // serve static
-app.listen(80, function () {
-    console.log('Example app listening on port 80!');
+app.listen(PORT_LISTEN, function () {
+    console.log('[START] Homepage Server [app.js] listening on port %s!', PORT_LISTEN);
+    console.log('[INFO] Open localhost:%s in browser', PORT_LISTEN);
 });
 //mongoose.connect('mongodb://localhost/web_db');
 app.get('/', function (req, res) {

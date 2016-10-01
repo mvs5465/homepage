@@ -7,10 +7,22 @@
             , templateUrl: 'tabs/tab-home.html'
         };
     });
-    app.directive('tabParks', function () {
+    app.directive('tabParks1', function () {
+        return {
+            restrict: 'E'
+            , templateUrl: 'tabs/tab-parks.html'
+        };
+    });
+    app.directive('tabParks2', function () {
         return {
             restrict: 'E'
             , templateUrl: 'tabs/tab-parks-new.html'
+        };
+    });
+    app.directive('tabParks3', function () {
+        return {
+            restrict: 'E'
+            , templateUrl: 'tabs/tab-parks-search.html'
         };
     });
     app.directive('tabRecipes', function () {
@@ -29,6 +41,12 @@
         return {
             restrict: 'E'
             , templateUrl: 'tabs/tab-api.html'
+        };
+    });
+    app.directive('tabLog', function () {
+        return {
+            restrict: 'E'
+            , templateUrl: 'tabs/tab-log.html'
         };
     });
 }());
