@@ -11,12 +11,13 @@ The Homepage Project is a testing ground for MEAN stack development. This stack 
 ### Todo
 
 In-progress:
-- Improve parks tab UI
+- [ ] Improve parks tab UI
 
 Backlog:
-- Fix Google Map loading (can somehow force load by opening devtools)
-- Add highlighting effects to navbar
-- Stop using CDNs
+- [ ] Move "Select a park!" dropdown on Nat Parks 1 into Summary widget
+- [ ] Fix Google Map loading (tempfix is to have force-load button)
+- [ ] Add highlighting effects to navbar
+- [ ] Stop using CDNs
 
 
 Completed:
